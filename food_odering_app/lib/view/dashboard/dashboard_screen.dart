@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 import 'package:food_odering_app/controller/dashboard_controller.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
+import 'package:food_odering_app/view/home/home_screen.dart';
 
+//DashboardScreen adalah untuk menggambarkan tampilan halaman utama (dashboard) dalam aplikasi
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
 
@@ -12,14 +14,30 @@ class DashboardScreen extends StatelessWidget {
       builder: (controller) => Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.red,
-          title: const Text("Mother's Recipe"),
+          title: const Text("What Would You Like To Eat Today?"),
           titleTextStyle: const TextStyle(
             fontSize: 20,
           ),
         ),
     
     
-        body: Container(),
+        body: SafeArea(
+          child: IndexedStack(
+            index: controller.tabIndex,
+            children: [
+              Container(),
+              Container(
+                color: Colors.red,
+              ),
+              Container(
+                color: Colors.blue,
+              ),
+              Container(
+                color: Colors.orange,
+              ),
+            ],
+          ),
+        ),
     
         bottomNavigationBar: Container(
           decoration: const BoxDecoration(
@@ -50,8 +68,9 @@ class DashboardScreen extends StatelessWidget {
             showSelectedLabels: true,
             currentIndex: controller.tabIndex,
             onTap: (value) {
-             
+             controller.updateIndex(value);
             },
+  
             items: const [
               BottomNavigationBarItem(icon: Icon(Icons.home_sharp), label: 'Home'),
               BottomNavigationBarItem(icon: Icon(Icons.bookmark), label: 'Bookmark'),
