@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'listviewMOTD.dart';
+import 'listviewBrunch.dart';
+import 'listviewBeverages.dart';
 
 //HomeScreen adalah untuk menggambarkan halaman utama (home) dalam aplikasi
 class HomeScreen extends StatelessWidget {
@@ -8,7 +11,61 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Column(
-        children: const [
+        children: [
+           const SizedBox(height: 20),
+
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                'Menu Of The Day:',
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+                ),
+              ),
+            ),
+
+           const SizedBox(),
+          
+           MenuOfTheDayHorizontalList(),
+
+           const SizedBox(height: 30),
+
+           const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                'Brunch:',
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+                ),
+              ),
+            ),
+
+            BrunchHorizontalList(),
+
+            const SizedBox(height: 30),
+
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                'Beverages:',
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+                ),
+              ),
+            ),
+
+            BeveragesHorizontalList(),
+
+
         ]
         ),
     );

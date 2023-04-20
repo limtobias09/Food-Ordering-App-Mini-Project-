@@ -21,23 +21,7 @@ class DashboardScreen extends StatelessWidget {
         ),
     
     
-        body: SafeArea(
-          child: IndexedStack(
-            index: controller.tabIndex,
-            children: [
-              Container(),
-              Container(
-                color: Colors.red,
-              ),
-              Container(
-                color: Colors.blue,
-              ),
-              Container(
-                color: Colors.orange,
-              ),
-            ],
-          ),
-        ),
+        body: const HomeScreen(),
     
         bottomNavigationBar: Container(
           decoration: const BoxDecoration(
