@@ -1,0 +1,56 @@
+{
+  "Beverages": {
+    "item1": {
+      "deskripsi": "Teh manis dingin dengan es batu.",
+      "gambar": "assets/images/Beverages/beverages1.jpg",
+      "harga": 5000,
+      "nama": "Jasmine Tea"
+    },
+    "item2": {
+      "deskripsi": "Shot espresso segar.",
+      "gambar": "assets/images/Beverages/beverages1.jpg",
+      "harga": 20000,
+      "nama": "Wine"
+    }
+  },
+  "Breakfast": {
+    "item1": {
+      "deskripsi": "Pangsit isi daging sapi yang di goreng.",
+      "gambar": "assets/images/Breakfast/breakfast1.jpg",
+      "harga": 35000,
+      "nama": "Mantao"
+    },
+    "item2": {
+      "deskripsi": "Roti panggang dengan taburan gula bubuk dan whipped cream.",
+      "gambar": "assets/images/Breakfast/breakfast1.jpg",
+      "harga": 40000,
+      "nama": "Bakpao"
+    },
+    "item3": {
+      "deskripsi": "Roti panggang dengan taburan gula bubuk dan whipped cream.",
+      "gambar": "assets/images/Breakfast/breakfast1.jpg",
+      "harga": 40000,
+      "nama": "Siomay"
+    }
+  },
+  "Menu_Of_The_Day": {
+    "item1": {
+      "deskripsi": "Nasi goreng dengan campuran ikan teri.",
+      "gambar": "assets/images/Menu Of The Day/menuoftheday1.jpg",
+      "harga": 25000,
+      "nama": "Nasi Goreng Ikan Teri"
+    },
+    "item2": {
+      "deskripsi": "Sawi putih dengan campuran bakso.",
+      "gambar": "assets/images/Menu Of The Day/menuoftheday2.jpg",
+      "harga": 30000,
+      "nama": "Sawi Putih Cah Bakso"
+    },
+    "item3": {
+      "deskripsi": "Jamur kuping dicampur nanas dan bakso",
+      "gambar": "assets/images/Menu Of The Day/menuoftheday2.jpg",
+      "harga": 30000,
+      "nama": "Jamur Kuping Nanas Cah Bakso"
+    }
+  }
+}
