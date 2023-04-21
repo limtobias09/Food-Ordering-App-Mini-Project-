@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food_odering_app/view/dashboard/dashboard_screen.dart';
+import 'package:food_ordering_app2/view/dashboard/dashboard_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:email_validator/email_validator.dart';
-import 'package:food_odering_app/view/home/home_screen.dart';
+
 
 class LogInScreen extends StatefulWidget {
   const LogInScreen({super.key});
@@ -68,6 +68,10 @@ class _LogInScreenState extends State<LogInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Welcome To Mother's Recipe"),
+        backgroundColor: const Color.fromARGB(255, 173, 45, 36),
+      ),
       body: Container(
         padding: const EdgeInsets.all(16),
         child: Form(
@@ -94,6 +98,8 @@ class _LogInScreenState extends State<LogInScreen> {
                 },
               ),
 
+              const SizedBox(height: 10),
+
               TextFormField(
                 controller: _emailController,
                 decoration: const InputDecoration(
@@ -110,6 +116,8 @@ class _LogInScreenState extends State<LogInScreen> {
                   }
                 },
               ),
+
+              const SizedBox(height: 10),
 
               TextFormField(
                 controller: _passwordController,
@@ -128,7 +136,7 @@ class _LogInScreenState extends State<LogInScreen> {
                 },
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
 
               ElevatedButton(
                 onPressed: (){

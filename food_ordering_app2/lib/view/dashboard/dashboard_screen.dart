@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_ordering_app2/view/login&register/login_register.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:food_ordering_app2/view/login&register/login_or_register_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -41,7 +41,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 Navigator.pushReplacement(
                   context, 
                   MaterialPageRoute(
-                    builder: (context)=> const LogInScreen(),
+                    builder: (context)=> const LoginOrRegisterScreen(),
                     ),
                   );
               }, 
