@@ -10,7 +10,7 @@ class LoginOrRegisterScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login Or Register?'),
-        backgroundColor: const Color.fromARGB(255, 173, 45, 36),
+        backgroundColor: const Color.fromARGB(255, 154, 41, 33),
       ),
 
       body: Container(

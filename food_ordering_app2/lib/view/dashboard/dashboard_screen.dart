@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:food_ordering_app2/view/login&register/login_or_register_screen.dart';
+import 'package:food_ordering_app2/view/home/home_screen.dart';
+import 'package:food_ordering_app2/view/bookmark/bookmark_screen.dart';
+import 'package:food_ordering_app2/view/checkout/checkout_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -11,45 +12,32 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen> {
 
-  //'late' fungsinya untuk menunda inisialisasi sebuah variabel sampai benar-benar dibutuhkan agar hemat memori
-  late SharedPreferences logindata;
+  int _index=0;
+  final screens=[
+    const HomeScreen(),
+    const BookmarkScreen(),
+    const CheckoutScreen(),
+  ];
 
-  //'initState' artinya merupakan sebuah metode yang pertama kali diinisialisasi
-  //Dalam kasus ini 'initial()' akan pertama kali diinisialisasi
-  @override
-  void initState() {
-    super.initState();
-    initial();
-  }
-
-  //'initial' akan menjalankan metode 'getInstance' dari 'SharedPreferences' dan mengembalikan hasil sebagai 'Future'
-  //Artinya akan ditunggu sampai hasil Future diterima sebelum lanjut ke kode selanjutnya
-  void initial() async{
-    logindata= await SharedPreferences.getInstance();
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
 
-      drawer: Drawer(
-        child: ListView(     
-          children: [
-            TextButton(
-              onPressed: (){
-                logindata.setBool('login', true);
-                Navigator.pushReplacement(
-                  context, 
-                  MaterialPageRoute(
-                    builder: (context)=> const LoginOrRegisterScreen(),
-                    ),
-                  );
-              }, 
-              child: const Text('Log Out', style: TextStyle(fontSize: 20),),
-              ),
-          ],   
-        ),
-      ),
+      body: screens[_index],
+
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _index,
+        onTap: (value){
+          setState(() {
+            _index=value;
+          });
+        },
+
+        items: const [
+              BottomNavigationBarItem(icon: Icon(Icons.home_sharp), label: 'Home'),
+              BottomNavigationBarItem(icon: Icon(Icons.bookmark), label: 'Bookmark'),
+              BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_rounded), label: 'Checkout'),
+            ],),
     );
   }
 }

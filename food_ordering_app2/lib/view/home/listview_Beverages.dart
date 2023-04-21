@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class BreakfastHorizontalList extends StatefulWidget{
+class BeveragesHorizontalList extends StatefulWidget{
   @override
-  State<BreakfastHorizontalList> createState() => _BreakfastHorizontalListState();
+  State<BeveragesHorizontalList> createState() => _BeveragesHorizontalListState();
 }
 
-class _BreakfastHorizontalListState extends State<BreakfastHorizontalList> {
+class _BeveragesHorizontalListState extends State<BeveragesHorizontalList> {
   @override
   Widget build (BuildContext context){
     return Container(
@@ -29,7 +29,7 @@ class _BreakfastHorizontalListState extends State<BreakfastHorizontalList> {
                   borderRadius: BorderRadius.circular(10.0),
                   image: const DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage("assets/images/breakfast1.jpg"),
+                    image: AssetImage("assets/images/beverages1.jpg"),
                     )
                 ),
               ),
@@ -47,7 +47,7 @@ class _BreakfastHorizontalListState extends State<BreakfastHorizontalList> {
                     color: Colors.black.withOpacity(0.5)
                   ),
                   child: const Text(
-                    'Dimsum Goreng',
+                    'Teh Melati',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16.0,
@@ -75,7 +75,7 @@ class _BreakfastHorizontalListState extends State<BreakfastHorizontalList> {
                   borderRadius: BorderRadius.circular(10.0),
                   image: const DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage("assets/images/breakfast2.jpg"),
+                    image: AssetImage("assets/images/beverages2.jpg"),
                     )
                 ),
               ),
@@ -93,7 +93,7 @@ class _BreakfastHorizontalListState extends State<BreakfastHorizontalList> {
                     color: Colors.black.withOpacity(0.5)
                   ),
                   child: const Text(
-                    'Siomay',
+                    'Teh Jahe',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16.0,
@@ -121,7 +121,7 @@ class _BreakfastHorizontalListState extends State<BreakfastHorizontalList> {
                   borderRadius: BorderRadius.circular(10.0),
                   image: const DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage("assets/images/breakfast3.jpg"),
+                    image: AssetImage("assets/images/beverages3.jpg"),
                     )
                 ),
               ),
@@ -139,7 +139,7 @@ class _BreakfastHorizontalListState extends State<BreakfastHorizontalList> {
                     color: Colors.black.withOpacity(0.5)
                   ),
                   child: const Text(
-                    'Bakpao',
+                    'Es Cincau Jeli',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16.0,
@@ -151,7 +151,6 @@ class _BreakfastHorizontalListState extends State<BreakfastHorizontalList> {
              ]
             ),
            ),
-         
         ],
       ),
     );
