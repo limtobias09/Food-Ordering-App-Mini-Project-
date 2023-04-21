@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
 
-class MenuOfTheDayHorizontalList extends StatefulWidget{
+class BrunchHorizontalList extends StatefulWidget{
   @override
-  State<MenuOfTheDayHorizontalList> createState() => _MenuOfTheDayHorizontalListState();
+  State<BrunchHorizontalList> createState() => _BrunchHorizontalListState();
 }
 
-class _MenuOfTheDayHorizontalListState extends State<MenuOfTheDayHorizontalList> {
-
-  Map<String, dynamic>? data;
-
+class _BrunchHorizontalListState extends State<BrunchHorizontalList> {
   @override
   Widget build (BuildContext context){
     return Container(
       height: 150.0,
-      child: 
-        ListView(
-          scrollDirection: Axis.horizontal,
-          children: [
-           Card(
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+         Card(
             elevation: 10.0,
             shadowColor: Colors.grey.withOpacity(0.5),
             shape: RoundedRectangleBorder(
@@ -33,7 +29,7 @@ class _MenuOfTheDayHorizontalListState extends State<MenuOfTheDayHorizontalList>
                   borderRadius: BorderRadius.circular(10.0),
                   image: const DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage("assets/images/menuoftheday1.jpg"),
+                    image: AssetImage("assets/images/breakfast1.jpg"),
                     )
                 ),
               ),
@@ -51,7 +47,7 @@ class _MenuOfTheDayHorizontalListState extends State<MenuOfTheDayHorizontalList>
                     color: Colors.black.withOpacity(0.5)
                   ),
                   child: const Text(
-                    'Nasi Goreng Ikan Teri',
+                    'Dimsum Goreng',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16.0,
@@ -63,7 +59,7 @@ class _MenuOfTheDayHorizontalListState extends State<MenuOfTheDayHorizontalList>
              ]
             ),
            ),
-           Card(
+         Card(
             elevation: 10.0,
             shadowColor: Colors.grey.withOpacity(0.5),
             shape: RoundedRectangleBorder(
@@ -79,7 +75,7 @@ class _MenuOfTheDayHorizontalListState extends State<MenuOfTheDayHorizontalList>
                   borderRadius: BorderRadius.circular(10.0),
                   image: const DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage("assets/images/menuoftheday2.jpg"),
+                    image: AssetImage("assets/images/breakfast2.jpg"),
                     )
                 ),
               ),
@@ -97,7 +93,7 @@ class _MenuOfTheDayHorizontalListState extends State<MenuOfTheDayHorizontalList>
                     color: Colors.black.withOpacity(0.5)
                   ),
                   child: const Text(
-                    'Sawi Putih Cah Bakso',
+                    'Siomay',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16.0,
@@ -109,8 +105,7 @@ class _MenuOfTheDayHorizontalListState extends State<MenuOfTheDayHorizontalList>
              ]
             ),
            ),
-
-           Card(
+         Card(
             elevation: 10.0,
             shadowColor: Colors.grey.withOpacity(0.5),
             shape: RoundedRectangleBorder(
@@ -126,7 +121,7 @@ class _MenuOfTheDayHorizontalListState extends State<MenuOfTheDayHorizontalList>
                   borderRadius: BorderRadius.circular(10.0),
                   image: const DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage("assets/images/menuoftheday3.jpg"),
+                    image: AssetImage("assets/images/breakfast3.jpg"),
                     )
                 ),
               ),
@@ -144,7 +139,7 @@ class _MenuOfTheDayHorizontalListState extends State<MenuOfTheDayHorizontalList>
                     color: Colors.black.withOpacity(0.5)
                   ),
                   child: const Text(
-                    'Jamur Kuping Nanas Cah Bakso',
+                    'Bakpao',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16.0,
@@ -156,10 +151,9 @@ class _MenuOfTheDayHorizontalListState extends State<MenuOfTheDayHorizontalList>
              ]
             ),
            ),
-      
-           
-          ],
-        ),
-      );
+         
+        ],
+      ),
+    );
   }
 }
