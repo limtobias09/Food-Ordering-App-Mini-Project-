@@ -18,7 +18,12 @@ class _DescriptionScreenState extends State<DescriptionScreen> {
         backgroundColor: const Color.fromARGB(255, 154, 41, 33),
         actions: <Widget>[
           IconButton(
-            onPressed: (){}, 
+            onPressed: (){
+              Navigator.pushNamed(
+                  context, 
+                  '/4',
+                  );
+            }, 
             icon: const Icon(
               Icons.shopping_cart, 
               color: Colors.black,
