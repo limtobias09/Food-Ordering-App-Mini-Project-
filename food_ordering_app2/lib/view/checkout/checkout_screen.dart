@@ -45,6 +45,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         ),
 
         floatingActionButton: FloatingActionButton(
+        //Menggunakan pushAndRemoveUntil agar semua halaman Checkout sebelumnya akan dihapus
         onPressed:(){
           Navigator.pushAndRemoveUntil(
             context, 
