@@ -4,6 +4,8 @@ import 'package:food_ordering_app2/view/dashboard/dashboard_screen.dart';
 import 'package:get/get.dart';
 
 class CheckoutScreen extends StatefulWidget {
+
+  //Deklarasi variabel cartController dengan tipe data CartController
   final CartController cartController;
 
   const CheckoutScreen({Key? key, required this.cartController}): super(key: key);
@@ -15,7 +17,9 @@ class CheckoutScreen extends StatefulWidget {
 class _CheckoutScreenState extends State<CheckoutScreen> {
   @override
   Widget build(BuildContext context) {
-
+    
+    //Get.find<CartController>() digunakan untuk mendapatkan instance CartController 
+    //cartController.cartItems digunakan untuk mengakses properti cartItems dari instance cartController
     final cartController= Get.find<CartController>();
     final cartItems=cartController.cartItems;
 
@@ -25,6 +29,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         backgroundColor: const Color.fromARGB(255, 154, 41, 33),
       ),
 
+      //GetBuilder<CartController> digunakan untuk membangun UI berdasarkan state yang ada pada instance dari CartController
       body: GetBuilder<CartController>(
         init: widget.cartController,
         builder: (cartController){
