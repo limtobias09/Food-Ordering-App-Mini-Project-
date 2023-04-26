@@ -35,17 +35,46 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         builder: (cartController){
           final cartItems=cartController.cartItems;
           return cartItems.isNotEmpty?
-          ListView.builder(
-          itemCount: cartItems.length,
-          itemBuilder: (BuildContext context, int index){
-            final item= cartItems[index];
-            return ListTile(
-              leading: Image.asset(item['image']),
-              title: Text(item['title']),
-              subtitle: Text("Quantity: ${item['quantity']}"),
-            );
-          }
-          ):const Center(child: Text ('No items in cart'),);
+          SingleChildScrollView(
+            child: ListView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+            itemCount: cartItems.length,
+            itemBuilder: (BuildContext context, int index){
+              final item= cartItems[index];
+              return ListTile(
+                tileColor: index.isEven ? const Color.fromARGB(255, 177, 141, 141) : const Color.fromARGB(255, 160, 98, 98),
+                leading: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 10,
+                        offset: Offset(0, 5),
+                      )
+                    ]
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(item['image']))),
+                title: Text(item['title']),
+                subtitle: Text("Quantity: ${item['quantity']}"),
+                trailing: IconButton(
+                  onPressed: (){
+                    setState(() {
+                      cartController.removeItem(index);
+                    });
+                    
+                  }, 
+                  icon: const Icon (Icons.delete_rounded)
+                  ),
+              );
+            }
+            ),
+          ):const Center(child: Text ('No items in cart'),
+          );
         }
         ),
 
