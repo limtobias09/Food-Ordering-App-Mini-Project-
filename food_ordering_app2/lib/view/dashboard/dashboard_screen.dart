@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_ordering_app2/model/controller/cart_controller.dart';
+import 'package:food_ordering_app2/model/controller/bookmark_controller.dart';
 import 'package:food_ordering_app2/view/home/home_screen.dart';
 import 'package:food_ordering_app2/view/bookmark/bookmark_screen.dart';
 import 'package:food_ordering_app2/view/checkout/checkout_screen.dart';
@@ -19,7 +20,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   int _index=0;
   final screens=[
     const HomeScreen(),
-    const BookmarkScreen(),
+    BookmarkScreen(bookmarkController: Get.find<BookmarkController>()),
     CheckoutScreen(cartController: Get.find<CartController>()),
   ];
 

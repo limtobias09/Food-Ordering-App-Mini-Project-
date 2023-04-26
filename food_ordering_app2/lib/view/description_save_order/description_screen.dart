@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_ordering_app2/model/controller/cart_controller.dart';
+import 'package:food_ordering_app2/model/controller/bookmark_controller.dart';
 import 'package:get/get.dart';
 
 
@@ -19,6 +20,11 @@ class _DescriptionScreenState extends State<DescriptionScreen> {
   void addToCart(String title, String image, int quantity){
     final cartController=Get.find<CartController>();
     cartController.addToCart(title, image, quantity);
+  }
+
+  void addToBookmark(String title, String image){
+    final bookmarkController=Get.find<BookmarkController>();
+    bookmarkController.addToBookmark(title, image);
   }
 
   void incrementCount(){
@@ -148,7 +154,16 @@ class _DescriptionScreenState extends State<DescriptionScreen> {
                     onPressed: (){
                       addToCart(title, image, count);
                     }, 
-                    child: const Text('Add To Cart'))
+                    child: const Text('Add To Cart')
+                    ),
+
+                   const SizedBox(width: 8),
+
+                    ElevatedButton(
+                      onPressed: (){
+                        addToBookmark(title, image);
+                      }, child: const Text('Bookmark')
+                    )
                   ],
                 ),
         ],
