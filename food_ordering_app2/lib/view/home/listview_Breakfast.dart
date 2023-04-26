@@ -28,7 +28,7 @@ class _BreakfastHorizontalListState extends State<BreakfastHorizontalList> {
                   arguments: {
                     'title': 'Dimsum Goreng',
                     'image': 'assets/images/breakfast1.jpg',
-                    'description': 'bla bla bla bla',
+                    'description': 'Dimsum goreng adalah hidangan yang terdiri dari dimsum yang telah dikukus terlebih dahulu, kemudian digoreng dengan cara yang tepat sehingga menjadi krispi di luar dan lembut di dalam. Hidangan ini biasanya disajikan dengan saus cabai atau saus tomat sebagai pendamping.',
                   });
               },
               child: Stack(
@@ -86,7 +86,7 @@ class _BreakfastHorizontalListState extends State<BreakfastHorizontalList> {
                   arguments: {
                     'title': 'Siomay',
                     'image': 'assets/images/breakfast2.jpg',
-                    'description': 'ada deh',
+                    'description': 'Siomay adalah hidangan khas Tionghoa yang terdiri dari campuran daging ikan atau udang yang dihancurkan dan dicampur dengan tepung tapioka dan bumbu-bumbu, kemudian dibentuk seperti bola kecil dan dikukus hingga matang. Hidangan ini biasanya disajikan dengan saus kacang dan bawang goreng sebagai pelengkap.',
                   });
               },
               child: Stack(
@@ -144,7 +144,7 @@ class _BreakfastHorizontalListState extends State<BreakfastHorizontalList> {
                   arguments: {
                     'title': 'Bakpao',
                     'image': 'assets/images/breakfast3.jpg',
-                    'description': 'ada deh',
+                    'description': 'Bakpao adalah salah satu makanan khas Indonesia yang terbuat dari adonan tepung terigu yang diisi dengan bahan-bahan yang berbeda, seperti daging ayam, atau sayuran. Bakpao kemudian dikukus hingga matang dan disajikan dalam keadaan hangat.',
                   });
               },
               child: Stack(

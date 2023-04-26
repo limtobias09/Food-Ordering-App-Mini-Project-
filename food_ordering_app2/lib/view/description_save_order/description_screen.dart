@@ -129,8 +129,14 @@ class _DescriptionScreenState extends State<DescriptionScreen> {
               ),
           )
           ),
+
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Text(args['description']
+          ),
+         ),
           
-          Text(args['description']),
+          
 
           Row(
             mainAxisAlignment: MainAxisAlignment.start,

@@ -33,7 +33,7 @@ class _MenuOfTheDayHorizontalListState extends State<MenuOfTheDayHorizontalList>
                   arguments: {
                     'title': 'Nasi Goreng Ikan Teri',
                     'image': 'assets/images/menuoftheday1.jpg',
-                    'description':'bla bla bla',
+                    'description':'Nasi goreng ikan teri adalah hidangan nasi goreng yang dihasilkan dari penggorengan nasi dengan tambahan ikan teri yang telah diolah terlebih dahulu. Ikan teri yang digunakan untuk hidangan ini biasanya telah dihaluskan dan dicampurkan dengan bumbu-bumbu yang khas, seperti bawang putih, bawang merah, cabai, dan kecap manis.',
                   });
               },
               child: Stack(
@@ -91,7 +91,7 @@ class _MenuOfTheDayHorizontalListState extends State<MenuOfTheDayHorizontalList>
                   arguments: {
                     'title': 'Sawi Putih Cah Bakso',
                     'image':'assets/images/menuoftheday2.jpg',
-                    'description': 'bla bla bla bla',
+                    'description': 'Sawi putih cah bakso adalah hidangan sayuran yang terdiri dari sawi putih yang diolah dengan cara digoreng atau ditumis dengan bumbu-bumbu tertentu, lalu ditambahkan bakso sebagai tambahan protein.',
                   });
               },
               child: Stack(
@@ -150,7 +150,7 @@ class _MenuOfTheDayHorizontalListState extends State<MenuOfTheDayHorizontalList>
                   arguments: {
                    'title': 'Jamur Kuping Nanas Cah Bakso',
                    'image': 'assets/images/menuoftheday3.jpg',
-                   'description': 'ada deh',
+                   'description': 'amur kuping nanas cah bakso adalah hidangan yang terdiri dari jamur kuping dan potongan nanas yang diolah dengan cara ditumis bersama bumbu-bumbu dan ditambahkan bakso sebagai tambahan protein.',
                   });
               },
               child: Stack(

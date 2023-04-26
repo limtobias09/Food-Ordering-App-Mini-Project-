@@ -28,7 +28,7 @@ class _BeveragesHorizontalListState extends State<BeveragesHorizontalList> {
                   arguments: {
                     'title': 'Teh Melati',
                     'image': 'assets/images/beverages1.jpg',
-                    'description': 'ada deh',
+                    'description': 'Teh melati adalah minuman yang terbuat dari campuran daun teh hijau dengan bunga melati segar atau kering. Teh melati sangat populer di Indonesia dan biasanya disajikan dalam acara-acara formal seperti pernikahan atau acara resmi lainnya.',
                   });
               },
               child: Stack(
@@ -86,7 +86,7 @@ class _BeveragesHorizontalListState extends State<BeveragesHorizontalList> {
                   arguments: {
                     'title': 'Teh Jahe',
                     'image': 'assets/images/beverages2.jpg',
-                    'description': 'ada deh',
+                    'description': 'Teh jahe adalah minuman tradisional yang terbuat dari jahe segar yang direbus bersama air dan gula, kemudian disajikan dalam keadaan panas atau dingin. Teh jahe sangat populer di Indonesia dan Asia Tenggara, karena khasiat jahe yang dipercaya dapat membantu menghangatkan tubuh dan meningkatkan daya tahan tubuh.',
                   });
               },
               child: Stack(
@@ -144,7 +144,7 @@ class _BeveragesHorizontalListState extends State<BeveragesHorizontalList> {
                   arguments: {
                     'title': 'Es Cincau Jeli', 
                     'image': 'assets/images/beverages3.jpg',
-                    'description': 'ada deh',
+                    'description': 'Es cincau jeli adalah minuman segar yang terbuat dari cincau hitam dan agar-agar, yang dicampur dengan air gula dan air kelapa muda atau santan, kemudian disajikan dalam keadaan dingin. Es cincau jeli sangat populer di Indonesia, khususnya pada saat cuaca panas.',
                   });
               },
               child: Stack(
