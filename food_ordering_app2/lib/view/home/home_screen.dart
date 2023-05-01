@@ -47,9 +47,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 logindata.setBool('login', true);
                 Navigator.pushReplacement(
                   context, 
-                  MaterialPageRoute(
-                    builder: (context)=> const LoginOrRegisterScreen(),
-                    ),
+                  PageRouteBuilder(
+                        pageBuilder: (context, animation, secondaryAnimation)=> const LoginOrRegisterScreen(),
+                        transitionsBuilder: ((context, animation, secondaryAnimation, child) {
+                          var begin= const Offset(1.0, 0.0);
+                          var end= Offset.zero;
+                          var curve=Curves.ease;
+
+                          var tween= Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+                          return SlideTransition(
+                            position: animation.drive(tween), 
+                            child: child,);
+                        })
+                        ),
                   );
               }, 
               child: const Text('Log Out', style: TextStyle(fontSize: 20),),

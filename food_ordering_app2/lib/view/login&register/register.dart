@@ -150,9 +150,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     registerdata.setBool('register', false);
                     Navigator.pushAndRemoveUntil(
                       context, 
-                      MaterialPageRoute(
-                        builder: (context)=> const DashboardScreen(),
-                        ), 
+                      PageRouteBuilder(
+                        pageBuilder: (context, animation, secondaryAnimation)=> const DashboardScreen(),
+                        transitionsBuilder: ((context, animation, secondaryAnimation, child) {
+                          var begin= const Offset(1.0, 0.0);
+                          var end= Offset.zero;
+                          var curve=Curves.ease;
+
+                          var tween= Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+                          return SlideTransition(
+                            position: animation.drive(tween), 
+                            child: child,);
+                        })
+                        ),  
                       (route) => false
                       );
                   }
