@@ -1,19 +1,19 @@
 import 'package:get/get.dart';
 import 'app_route.dart';
 import 'package:food_ordering_app2/view/dashboard/dashboard_screen.dart';
-import 'package:food_ordering_app2/view/login&register/login_or_register_screen.dart';
 import 'package:food_ordering_app2/view/description_save_order/description_screen.dart';
 import 'package:food_ordering_app2/view/checkout/checkout_screen.dart';
 import 'package:food_ordering_app2/view/bookmark/bookmark_screen.dart';
 import 'package:food_ordering_app2/model/controller/cart_controller.dart';
 import 'package:food_ordering_app2/model/controller/bookmark_controller.dart';
+import 'package:food_ordering_app2/view/login&register/authentication_screen.dart';
 
 
 class AppPage{
   static var list=[
     GetPage(
       name: AppRoute.login_or_register, 
-      page: ()=>const LoginOrRegisterScreen(),
+      page: ()=>LoginandRegister(),
       ),
       
     GetPage(

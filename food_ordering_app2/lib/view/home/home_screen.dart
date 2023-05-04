@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:food_ordering_app2/view/login&register/login_or_register_screen.dart';
 import 'package:food_ordering_app2/view/home/listview_MOTD.dart';
 import 'package:food_ordering_app2/view/home/listview_Breakfast.dart';
 import 'package:food_ordering_app2/view/home/listview_Beverages.dart';
-
+import 'package:food_ordering_app2/view/login&register/authentication_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,22 +13,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
 
-    //'late' fungsinya untuk menunda inisialisasi sebuah variabel sampai benar-benar dibutuhkan agar hemat memori
-  late SharedPreferences logindata;
-
-  //'initState' artinya merupakan sebuah metode yang pertama kali diinisialisasi
-  //Dalam kasus ini 'initial()' akan pertama kali diinisialisasi
-  @override
-  void initState() {
-    super.initState();
-    initial();
-  }
-
-  //'initial' akan menjalankan metode 'getInstance' dari 'SharedPreferences' dan mengembalikan hasil sebagai 'Future'
-  //Artinya akan ditunggu sampai hasil Future diterima sebelum lanjut ke kode selanjutnya
-  void initial() async{
-    logindata= await SharedPreferences.getInstance();
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,11 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             TextButton(
               onPressed: (){
-                logindata.setBool('login', true);
                 Navigator.pushReplacement(
                   context, 
                   PageRouteBuilder(
-                        pageBuilder: (context, animation, secondaryAnimation)=> const LoginOrRegisterScreen(),
+                        pageBuilder: (context, animation, secondaryAnimation)=> LoginandRegister(),
                         transitionsBuilder: ((context, animation, secondaryAnimation, child) {
                           var begin= const Offset(1.0, 0.0);
                           var end= Offset.zero;
