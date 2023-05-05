@@ -165,10 +165,24 @@ class _DescriptionScreenState extends State<DescriptionScreen> {
 
                    const SizedBox(width: 8),
 
-                    ElevatedButton(
+                    IconButton(
                       onPressed: (){
-                        addToBookmark(title, image);
-                      }, child: const Text('Bookmark')
+                        final bookmarkController = Get.find<BookmarkController>();
+                        bool isDuplicate = bookmarkController.bookmarkItems.any(
+                          (item) => item['title'] == title && item['image'] == image,
+                        );
+                        if (isDuplicate) {
+                          Get.snackbar(
+                            'Oops...', 
+                            "You've Already Bookmarked This Food",
+                            backgroundColor: Colors.black,
+                            colorText: Colors.white,
+                            );
+                        } else {
+                          addToBookmark(title, image);
+                        }
+                      },
+                      icon: const Icon(Icons.favorite_rounded),
                     )
                   ],
                 ),

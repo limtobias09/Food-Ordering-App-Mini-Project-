@@ -36,7 +36,6 @@ class _BookmarkScreenState extends State<BookmarkScreen> {
               child: GridView.builder(
           
                   shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
                   crossAxisSpacing: 5,

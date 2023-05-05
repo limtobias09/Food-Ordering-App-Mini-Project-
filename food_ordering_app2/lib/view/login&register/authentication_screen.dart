@@ -20,12 +20,11 @@ class _LoginandRegister extends State<LoginandRegister> {
 
   Future<String?> _authUserSignUp(SignupData data) async{
     debugPrint('Email: ${data.name}, Password: ${data.password}');
+    final list= await FirebaseAuth.instance.fetchSignInMethodsForEmail(data.name!);
     if(data.password!.length<6){
       return Future.value('Password must be at least 6 characters');
     }
-    try{
-      final list =await FirebaseAuth.instance.fetchSignInMethodsForEmail(data.name!);
-      if (list.isNotEmpty){
+    if (list.isNotEmpty){
         return 'Email is already registered, please login';
       }else{
       return Future.delayed(loginTime).then((_) async {
@@ -34,9 +33,6 @@ class _LoginandRegister extends State<LoginandRegister> {
       return null;
     });
       }
-    }catch (e){
-      return null;
-    } 
   }
   
   Future<String?> _authUserLogin(LoginData data)async{
