@@ -27,8 +27,7 @@ class MyApp extends StatelessWidget {
         Get.put(BookmarkController());
         }),
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+        primaryColor: const Color.fromARGB(255, 212, 137, 132),)
     );
   }
 }
