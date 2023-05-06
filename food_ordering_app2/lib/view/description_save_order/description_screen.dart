@@ -174,7 +174,9 @@ class _DescriptionScreenState extends State<DescriptionScreen> {
                       if (isFavorite) {
                         bookmarkController.addToBookmark(title, image);
                       } else {
-                        int index = bookmarkController.bookmarkItems.indexWhere((item) => item['title'] == title && item['image'] == image);
+                        int index = bookmarkController.bookmarkItems.indexWhere(
+                          (item) => item['title'] == title && item['image'] == image
+                          );
                         if (index != -1) {
                           bookmarkController.removeItem(index);
                           Get.snackbar(
