@@ -157,9 +157,27 @@ class _DescriptionScreenState extends State<DescriptionScreen> {
                   ),
 
                   const SizedBox(width: 8),
+
                   ElevatedButton(
                     onPressed: (){
-                      addToCart(title, image, count);
+                      if(count>0){
+                       addToCart(title, image, count);
+                       Get.snackbar(
+                        'Great Choice',
+                        'Your Food Is Added or Updated To Your Cart',
+                        backgroundColor: Colors.black,
+                        colorText: Colors.white,
+                        duration: const Duration(seconds: 4),
+                        );
+                      }else{
+                        Get.snackbar(
+                          'Whoops...', 
+                          'Please Add At Least One Item To Your Cart',
+                          backgroundColor: Colors.black,
+                          colorText: Colors.white,
+                          duration: const Duration(seconds: 4),
+                          );
+                      } 
                     }, 
                     child: const Text('Add To Cart')
                     ),

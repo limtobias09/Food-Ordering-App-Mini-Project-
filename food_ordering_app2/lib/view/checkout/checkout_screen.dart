@@ -58,9 +58,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                   ),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10),
-                    child: Image.asset(item['image']))),
-                title: Text(item['title']),
-                subtitle: Text("Quantity: ${item['quantity']}"),
+                    child: Image.asset(item.image))),
+                title: Text(item.title),
+                subtitle: Text("Quantity: ${item.quantity}"),
                 trailing: IconButton(
                   onPressed: (){
                     setState(() {
