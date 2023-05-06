@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_ordering_app2/model/controller/cart_controller.dart';
 import 'package:food_ordering_app2/model/controller/bookmark_controller.dart';
 import 'package:get/get.dart';
+import 'package:favorite_button/favorite_button.dart';
 
 
 class DescriptionScreen extends StatefulWidget {
@@ -165,25 +166,27 @@ class _DescriptionScreenState extends State<DescriptionScreen> {
 
                    const SizedBox(width: 8),
 
-                    IconButton(
-                      onPressed: (){
-                        final bookmarkController = Get.find<BookmarkController>();
-                        bool isDuplicate = bookmarkController.bookmarkItems.any(
-                          (item) => item['title'] == title && item['image'] == image,
-                        );
-                        if (isDuplicate) {
+                    FavoriteButton(
+                    isFavorite: Get.find<BookmarkController>().isBookmarked(title, image),
+                    iconSize: 40.0,
+                    valueChanged: (isFavorite) {
+                      final bookmarkController = Get.find<BookmarkController>();
+                      if (isFavorite) {
+                        bookmarkController.addToBookmark(title, image);
+                      } else {
+                        int index = bookmarkController.bookmarkItems.indexWhere((item) => item['title'] == title && item['image'] == image);
+                        if (index != -1) {
+                          bookmarkController.removeItem(index);
                           Get.snackbar(
-                            'Oops...', 
-                            "You've Already Bookmarked This Food",
+                            'Success', 
+                            "Removed from Bookmarks",
                             backgroundColor: Colors.black,
                             colorText: Colors.white,
-                            );
-                        } else {
-                          addToBookmark(title, image);
+                          );
                         }
-                      },
-                      icon: const Icon(Icons.favorite_rounded),
-                    )
+                      }
+                    },
+                  )
                   ],
                 ),
         ],
